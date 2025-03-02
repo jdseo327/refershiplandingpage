@@ -7,17 +7,20 @@ import tsParser from '@typescript-eslint/parser';
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = dirname(__filename);
 
+// Create a compatibility layer for legacy configs
 const compat = new FlatCompat({
   baseDirectory: __dirname,
 });
 
-const eslintConfig = [...compat.extends('next/core-web-vitals', 'next/typescript')];
-
 export default [
+  // Use legacy configs (core-web-vitals)
+  ...compat.extends('next/core-web-vitals'),
+
+  // Add specific configuration for JS/TS files
   {
     files: ['**/*.{js,jsx,ts,tsx}'],
     plugins: {
-      '@next/next': nextPlugin,
+      next: nextPlugin,
     },
     languageOptions: {
       parser: tsParser,
@@ -30,7 +33,9 @@ export default [
       },
     },
     rules: {
+      // Apply Next.js recommended rules
       ...nextPlugin.configs.recommended.rules,
+      // Add any custom rules here
     },
   },
 ];
