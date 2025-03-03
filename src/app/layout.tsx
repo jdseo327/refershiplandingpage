@@ -10,6 +10,20 @@ export const metadata: Metadata = {
   title: 'Refership - Your AI Chief BD Officer',
   description:
     'AI-powered strategic partnerships for modern businesses. Discover the perfect match for your business with our intelligent partnership platform.',
+  icons: {
+    icon: [
+      {
+        url: '/favicon.svg',
+        type: 'image/svg+xml',
+      },
+    ],
+    apple: [
+      {
+        url: '/favicon.svg',
+        type: 'image/svg+xml',
+      },
+    ],
+  },
 };
 
 export default function RootLayout({
