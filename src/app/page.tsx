@@ -23,6 +23,7 @@ import HeroBackground from '@/components/HeroBackground';
 import WaitlistBackground from '@/components/WaitlistBackground';
 import { SiteFooter } from '@/components/site-footer';
 import { useState, useEffect } from 'react';
+import Head from 'next/head';
 
 // This would be imported when you integrate EmailJS
 // import emailjs from '@emailjs/browser';
@@ -61,7 +62,7 @@ export default function Home() {
     }
 
     if (!isValidEmail(heroEmail)) {
-      setHeroError('Please enter a valid email address');
+      setHeroError('Please enter a valid work email');
       return;
     }
 
@@ -113,7 +114,7 @@ export default function Home() {
     }
 
     if (!isValidEmail(waitlistEmail)) {
-      setWaitlistError('Please enter a valid email address');
+      setWaitlistError('Please enter a valid work email');
       return;
     }
 
@@ -203,6 +204,14 @@ export default function Home() {
 
   return (
     <PageContainer>
+      <Head>
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
+        <link
+          href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600&display=swap"
+          rel="stylesheet"
+        />
+      </Head>
       {/* Hero Section */}
       <div className="relative isolate bg-white dark:bg-transparent">
         {/* Animated background */}
@@ -214,10 +223,17 @@ export default function Home() {
               <span className="hero-title-line1">Refership</span>
               <span className="hero-title-line2">Your AI Chief BD Officer</span>
             </h1>
-            <p className="hero-subtitle dark:text-white text-zinc-900">
-              What if finding strategic partners was as simple as knowing who already wants to work
-              with you?
-            </p>
+            <div className="hero-subtitle-container mx-auto max-w-3xl px-4 py-3 mb-10 text-center bg-gray-50/50 dark:bg-transparent backdrop-blur-sm rounded-lg">
+              <p className="hero-subtitle text-xl md:text-2xl lg:text-3xl leading-relaxed inline">
+                What if <span className="gradient-text font-bold">finding strategic partners</span>{' '}
+                was as simple as
+              </p>
+              <br className="md:hidden" />
+              <p className="hero-subtitle text-xl md:text-2xl lg:text-3xl leading-relaxed inline md:ml-2">
+                knowing who already{' '}
+                <span className="gradient-text font-bold">wants to work with you</span>?
+              </p>
+            </div>
             <form onSubmit={handleHeroSubmit} className="max-w-md mx-auto mb-8">
               <div className="flex flex-col gap-4 mb-4">
                 <Input
@@ -231,7 +247,7 @@ export default function Home() {
                 <div className="flex flex-col sm:flex-row gap-4">
                   <Input
                     type="email"
-                    placeholder="Email Address"
+                    placeholder="Work Email"
                     value={heroEmail}
                     onChange={(e) => setHeroEmail(e.target.value)}
                     required
@@ -259,7 +275,7 @@ export default function Home() {
               Learn More
               <ArrowDown className="ml-2 w-4 h-4" />
             </Button>
-            <p className="transform-text max-w-3xl mx-auto text-zinc-600 dark:text-zinc-300 text-center text-base sm:text-lg">
+            <p className="transform-text max-w-3xl mx-auto text-zinc-600 dark:text-zinc-300 text-base sm:text-lg">
               Our AI matches you with companies that perfectly align with your vision and goals.
             </p>
           </div>
@@ -518,16 +534,6 @@ export default function Home() {
               </div>
             </div>
           </div>
-          <div className="mt-16 text-center">
-            <Button
-              size="lg"
-              className="bg-[#4A9EFF] dark:bg-[#FF6B6B] hover:bg-[#3A8EEF] dark:hover:bg-[#FF5252] text-white transition-all duration-300 transform hover:scale-105"
-              onClick={scrollToClosestWaitlist}
-            >
-              Find Your Partners Now
-              <ArrowRight className="ml-2 w-5 h-5" />
-            </Button>
-          </div>
         </div>
       </section>
 
@@ -555,7 +561,7 @@ export default function Home() {
                 <div className="flex flex-col sm:flex-row gap-4">
                   <Input
                     type="email"
-                    placeholder="Email Address"
+                    placeholder="Work Email"
                     value={waitlistEmail}
                     onChange={(e) => setWaitlistEmail(e.target.value)}
                     required
