@@ -16,13 +16,16 @@
    - Include mission statement and company values
    - Add contact information
 
-3. **Blog Functionality with Headless CMS**
+3. **Blog Functionality with Contentlayer**
 
-   - Select and integrate a headless CMS (options: Contentful, Sanity, Strapi)
-   - Create blog post templates and components
-   - Implement blog listing page
-   - Add pagination and filtering
-   - Set up categories and tags
+   - Set up Contentlayer for Markdown/MDX content management
+   - Create content schema with frontmatter for metadata (title, date, author, tags)
+   - Implement blog post templates and components
+   - Create blog listing page with pagination
+   - Add tag filtering functionality
+   - Implement simple client-side search (can upgrade to Algolia later if needed)
+   - Set up proper URL structure for SEO
+   - Create sample blog posts to test the system
 
 4. **SEO Optimization**
 

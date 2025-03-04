@@ -25,6 +25,18 @@ This project uses [`next/font`](https://nextjs.org/docs/app/building-your-applic
 - [TODO List](./docs/TODO.md) - Current project tasks and future enhancements
 - [Coding Standards](./.cursorrules) - Project-specific coding standards and guidelines
 
+## Blog Implementation
+
+This project uses [Contentlayer](https://contentlayer.dev/) for the blog functionality. Contentlayer transforms content (Markdown/MDX) into type-safe JSON data that can be easily imported into the Next.js application.
+
+Key benefits of this approach:
+
+- **Developer-friendly**: Write content in Markdown/MDX
+- **Type-safe**: Get TypeScript types for your content
+- **Fast**: Content is transformed at build time
+- **Flexible**: Easily extend with custom components
+- **SEO-friendly**: Works well with Next.js for optimal SEO
+
 ## Learn More
 
 To learn more about Next.js, take a look at the following resources:
