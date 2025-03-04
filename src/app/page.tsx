@@ -38,13 +38,7 @@ export default function Home() {
   // Add state to track theme
   const [isDark, setIsDark] = useState(false);
 
-  // Form state for hero section
-  const [heroName, setHeroName] = useState('');
-  const [heroEmail, setHeroEmail] = useState('');
-  const [heroSubmitting, setHeroSubmitting] = useState(false);
-  const [heroError, setHeroError] = useState('');
-
-  // Form state for waitlist section
+  // Form state for waitlist (used by both hero and waitlist sections)
   const [waitlistName, setWaitlistName] = useState('');
   const [waitlistEmail, setWaitlistEmail] = useState('');
   const [waitlistSubmitting, setWaitlistSubmitting] = useState(false);
@@ -61,59 +55,11 @@ export default function Home() {
     return emailRegex.test(email);
   };
 
-  // Handle hero form submission
-  const handleHeroSubmit = (e: React.FormEvent<HTMLFormElement>) => {
-    e.preventDefault();
-    setHeroError('');
-
-    // Validate fields
-    if (!heroName.trim()) {
-      setHeroError('Please enter your name');
-      return;
-    }
-
-    if (!isValidEmail(heroEmail)) {
-      setHeroError('Please enter a valid work email');
-      return;
-    }
-
-    setHeroSubmitting(true);
-
-    // Here you would integrate with EmailJS
-    // Example EmailJS integration:
-    /*
-    emailjs.send(
-      'YOUR_SERVICE_ID',
-      'YOUR_TEMPLATE_ID',
-      { 
-        name: heroName, 
-        email: heroEmail,
-        source: 'Hero Section'
-      },
-      'YOUR_PUBLIC_KEY'
-    )
-    .then((result) => {
-      setHeroSubmitting(false);
-      setHeroName('');
-      setHeroEmail('');
-      alert('Thanks for joining our waitlist! We\'ll be in touch soon.');
-    }, (error) => {
-      setHeroSubmitting(false);
-      setHeroError('Something went wrong. Please try again.');
-      console.log(error.text);
-    });
-    */
-
-    // Simulate submission for now
-    setTimeout(() => {
-      setHeroSubmitting(false);
-      setHeroName('');
-      setHeroEmail('');
-      alert("Thanks for joining our waitlist! We'll be in touch soon.");
-    }, 1000);
-  };
-
-  // Handle waitlist form submission
+  /**
+   * Handles form submission for both hero and waitlist sections.
+   *
+   * @param {React.FormEvent<HTMLFormElement>} e - The form submission event
+   */
   const handleWaitlistSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     setWaitlistError('');
@@ -148,7 +94,7 @@ export default function Home() {
       setWaitlistSubmitting(false);
       setWaitlistName('');
       setWaitlistEmail('');
-      alert('You\'ve been added to our waitlist! We\'ll notify you when we launch.');
+      alert('Thanks for joining our waitlist! We\'ll be in touch soon.');
     }, (error) => {
       setWaitlistSubmitting(false);
       setWaitlistError('Something went wrong. Please try again.');
@@ -161,7 +107,7 @@ export default function Home() {
       setWaitlistSubmitting(false);
       setWaitlistName('');
       setWaitlistEmail('');
-      alert("You've been added to our waitlist! We'll notify you when we launch.");
+      alert("Thanks for joining our waitlist! We'll be in touch soon.");
     }, 1000);
   };
 
@@ -249,6 +195,8 @@ export default function Home() {
               TODO: Fix UI bug - The button in this form doesn't display full width on mobile 
               despite having identical structure to the waitlist form below.
               Possible causes: parent container differences or CSS inheritance issues.
+              
+              Note: This form now uses the same handler and state variables as the waitlist form below.
             */}
             <form onSubmit={handleWaitlistSubmit} className="max-w-md mx-auto mb-8">
               <div className="flex flex-col gap-4">
