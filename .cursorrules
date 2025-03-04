@@ -66,6 +66,8 @@
 - Do not refactor or "improve" UI components without specific instructions
 - When adding new functionality, match the existing UI style exactly
 - Optimize images: use WebP format, include size data, implement lazy loading
+- **CRITICAL**: NEVER modify files in src/components/ui/ if they are from Shadcn, Radix, or other UI libraries
+- Do not add custom UI components to src/components/ui/ - this folder is reserved for standard library components
 
 ### 9. TypeScript and Coding Style
 
