@@ -134,7 +134,37 @@ Example format:
    - Added: YYYY-MM-DD
 ```
 
-<!-- No bugs currently tracked -->
+1. **Hero Form - Mobile Button Width** (Priority: Medium)
+
+   - File: src/app/page.tsx (around line 206)
+   - Issue: The button in the hero form doesn't display full width on mobile despite having identical structure to the waitlist form below
+   - Potential solutions:
+     - Check parent container differences
+     - Investigate CSS inheritance issues
+     - Compare with waitlist form implementation
+   - Added: 2023-11-15
+
+2. **Hero Subtitle - Line Breaks** (Priority: Low)
+   - File: src/app/page.tsx (around line 184)
+   - Issue: Line breaks on small screens need improvement
+   - Current breaks:
+     ```
+     "What if finding strategic partners was"
+     "as simple as"
+     "knowing who already wants to work"
+     "with you?"
+     ```
+   - Desired breaks:
+     ```
+     "What if finding strategic partners"
+     "was as simple as knowing who already"
+     "wants to work with you?"
+     ```
+   - Potential solutions:
+     - Adjust breakpoint-specific line breaks
+     - Modify text wrapping with CSS
+     - Restructure the subtitle JSX
+   - Added: 2023-11-15
 
 ## Future Enhancements
 
