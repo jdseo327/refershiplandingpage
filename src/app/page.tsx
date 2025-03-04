@@ -245,13 +245,18 @@ export default function Home() {
                 <span className="gradient-text font-bold">wants to work with you</span>?
               </p>
             </div>
-            <form onSubmit={handleHeroSubmit} className="max-w-md mx-auto mb-8">
+            {/* 
+              TODO: Fix UI bug - The button in this form doesn't display full width on mobile 
+              despite having identical structure to the waitlist form below.
+              Possible causes: parent container differences or CSS inheritance issues.
+            */}
+            <form onSubmit={handleWaitlistSubmit} className="max-w-md mx-auto mb-8">
               <div className="flex flex-col gap-4">
                 <Input
                   type="text"
                   placeholder="Full Name"
-                  value={heroName}
-                  onChange={(e) => setHeroName(e.target.value)}
+                  value={waitlistName}
+                  onChange={(e) => setWaitlistName(e.target.value)}
                   required
                   className="h-12 bg-white dark:bg-zinc-900/70 border-zinc-300 dark:border-zinc-800 text-zinc-900 dark:text-white"
                 />
@@ -259,23 +264,23 @@ export default function Home() {
                   <Input
                     type="email"
                     placeholder="Work Email"
-                    value={heroEmail}
-                    onChange={(e) => setHeroEmail(e.target.value)}
+                    value={waitlistEmail}
+                    onChange={(e) => setWaitlistEmail(e.target.value)}
                     required
                     className="h-12 bg-white dark:bg-zinc-900/70 border-zinc-300 dark:border-zinc-800 text-zinc-900 dark:text-white w-full"
                   />
                   <Button
                     type="submit"
                     size="lg"
-                    disabled={heroSubmitting}
+                    disabled={waitlistSubmitting}
                     className="w-full sm:w-auto bg-[#4A9EFF] dark:bg-[#FF6B6B] hover:bg-[#3A8EEF] dark:hover:bg-[#FF5252] text-white px-6 sm:px-8 py-5 sm:py-6 text-base sm:text-lg"
                   >
-                    {heroSubmitting ? 'Submitting...' : 'Join the waitlist'}
-                    {!heroSubmitting && <ArrowRight className="ml-2 w-4 h-4 sm:w-5 sm:h-5" />}
+                    {waitlistSubmitting ? 'Submitting...' : 'Join the waitlist'}
+                    {!waitlistSubmitting && <ArrowRight className="ml-2 w-4 h-4 sm:w-5 sm:h-5" />}
                   </Button>
                 </div>
               </div>
-              {heroError && <p className="text-red-500 text-sm mt-2">{heroError}</p>}
+              {waitlistError && <p className="text-red-500 text-sm mt-2">{waitlistError}</p>}
             </form>
             <Button
               variant="outline"
