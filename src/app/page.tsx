@@ -246,7 +246,7 @@ export default function Home() {
               </p>
             </div>
             <form onSubmit={handleHeroSubmit} className="max-w-md mx-auto mb-8">
-              <div className="flex flex-col gap-4 mb-4">
+              <div className="flex flex-col gap-4">
                 <Input
                   type="text"
                   placeholder="Full Name"
