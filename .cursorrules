@@ -164,5 +164,18 @@ This approach transforms AI from a reactive tool into a proactive development pa
   - Add a `// TODO: [Bug Description]` comment in the code
   - Add an entry to the Bug Tracker section in TODO.md with file location, description, potential solutions, and priority
   - Remind the user to revisit the Bug Tracker regularly
+- **Persistent Bug Protocol**: After 5 unsuccessful attempts to fix a bug or create functionality:
+  - Suggest that the user adds a detailed TODO comment in the code that includes:
+    - Description of the issue
+    - Summary of attempted solutions
+    - Hypothesis about the root cause
+    - Suggested next steps or alternative approaches
+  - Add a comprehensive entry to the Bug Tracker in TODO.md that includes:
+    - All previous fix attempts with explanations of why they failed
+    - Analysis of potential upstream issues or architectural problems
+    - Recommended course of action with rationale
+    - Priority level based on impact
+  - Consider if the issue requires architectural changes rather than local fixes
+  - Suggest temporarily implementing a workaround if possible
 
 ## When in doubt, ask for clarification rather than making assumptions.

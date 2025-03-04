@@ -85,30 +85,6 @@
    - Configure SSL certificates
    - Implement monitoring and logging
 
-## UI Bug Fixes
-
-1. **Hero Form Mobile Button Width**
-
-   - Fix UI bug where the button in the hero form doesn't display full width on mobile
-   - Current issue: Despite having identical structure to the waitlist form, the button doesn't render the same
-   - Possible causes: Parent container differences or CSS inheritance issues
-
-2. **Hero Subtitle Line Breaks**
-   - Improve line breaks on small screens
-   - Current breaks:
-     ```
-     "What if finding strategic partners was"
-     "as simple as"
-     "knowing who already wants to work"
-     "with you?"
-     ```
-   - Desired breaks:
-     ```
-     "What if finding strategic partners"
-     "was as simple as knowing who already"
-     "wants to work with you?"
-     ```
-
 ## Bug Tracker
 
 This section tracks bugs and issues that have been identified but temporarily set aside. Each entry includes:
@@ -124,6 +100,13 @@ When a bug is encountered that can't be immediately fixed:
 2. Add an entry to this Bug Tracker section
 3. Revisit and prioritize these issues regularly
 
+For persistent bugs (after 5+ fix attempts), include additional information:
+
+- Summary of all previous fix attempts and why they failed
+- Analysis of potential upstream issues or architectural problems
+- Detailed recommended course of action with rationale
+- Consider marking as "Requires Investigation" if the root cause remains unclear
+
 Example format:
 
 ```
@@ -132,6 +115,11 @@ Example format:
    - Issue: Detailed description of the problem
    - Potential solutions: Ideas for fixing
    - Added: YYYY-MM-DD
+
+   For persistent bugs, also include:
+   - Previous attempts: List of approaches tried and outcomes
+   - Root cause analysis: Deeper investigation into the source
+   - Recommended action: Specific next steps with justification
 ```
 
 1. **Hero Form - Mobile Button Width** (Priority: Medium)
