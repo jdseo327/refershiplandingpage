@@ -37,17 +37,19 @@ export function SiteHeader() {
   return (
     <header className="sticky top-0 z-50 w-full border-b border-zinc-200 dark:border-zinc-800 bg-zinc-100/95 backdrop-blur dark:bg-zinc-900/95 backdrop-blur supports-[backdrop-filter]:bg-zinc-100/100 relative dark:supports-[backdrop-filter]:bg-zinc-900/80 relative">
       <HeaderBackground />
-      <div className="container flex h-14 max-w-7xl items-center justify-between">
+      <div className="container flex h-12 sm:h-14 max-w-7xl items-center justify-between px-4 sm:px-6">
         <div className="flex items-center">
           <Link href="/" className="flex items-center space-x-1">
-            <LogoIcon className="h-8 w-8" />
-            <span className="text-lg font-bold text-zinc-900 dark:text-white">refership</span>
+            <LogoIcon className="h-6 w-6 sm:h-8 sm:w-8" />
+            <span className="text-base sm:text-lg font-bold text-zinc-900 dark:text-white">
+              refership
+            </span>
           </Link>
         </div>
 
         {/* Desktop Navigation */}
-        <nav className="hidden md:flex flex-1 items-center justify-between ml-12">
-          <div className="flex items-center space-x-8">
+        <nav className="hidden md:flex flex-1 items-center justify-between ml-8 sm:ml-12">
+          <div className="flex items-center space-x-6 sm:space-x-8">
             <Link
               href="/proof-of-concept"
               className="text-sm font-medium text-zinc-600 dark:text-zinc-400 transition-colors hover:text-zinc-900 dark:hover:text-white"
@@ -75,7 +77,7 @@ export function SiteHeader() {
           </div>
         </nav>
 
-        <div className="flex items-center space-x-4">
+        <div className="flex items-center space-x-2 sm:space-x-4">
           {/* Theme Toggle */}
           <ThemeToggle />
 
@@ -85,16 +87,20 @@ export function SiteHeader() {
             onClick={() => setIsMenuOpen(!isMenuOpen)}
             aria-label={isMenuOpen ? 'Close menu' : 'Open menu'}
           >
-            {isMenuOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
+            {isMenuOpen ? (
+              <X className="h-5 w-5 sm:h-6 sm:w-6" />
+            ) : (
+              <Menu className="h-5 w-5 sm:h-6 sm:w-6" />
+            )}
           </button>
         </div>
       </div>
 
       {/* Mobile Navigation Menu */}
       {isMenuOpen && (
-        <div className="md:hidden absolute top-14 left-0 right-0 bg-zinc-100/95 dark:bg-zinc-900/95 backdrop-blur border-b border-zinc-200 dark:border-zinc-800 z-50">
-          <nav className="container py-4">
-            <div className="flex flex-col space-y-4">
+        <div className="md:hidden absolute top-12 sm:top-14 left-0 right-0 bg-zinc-100/95 dark:bg-zinc-900/95 backdrop-blur border-b border-zinc-200 dark:border-zinc-800 z-50">
+          <nav className="container py-3 sm:py-4 px-4 sm:px-6">
+            <div className="flex flex-col space-y-3 sm:space-y-4">
               <Link
                 href="/proof-of-concept"
                 className="text-sm font-medium text-zinc-600 dark:text-zinc-400 transition-colors hover:text-zinc-900 dark:hover:text-white px-2 py-1"
