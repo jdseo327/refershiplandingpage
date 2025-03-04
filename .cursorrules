@@ -1,0 +1,132 @@
+# Cursor Rules for refership_web_v3
+
+## Important Guidelines
+
+### 1. Avoid Changing Too Many Items at Once
+
+- **CRITICAL**: Do not modify more than 2-3 files in a single edit
+- Large changes often break functionality in unexpected ways
+- Make incremental changes and verify each works before proceeding
+
+### 2. Code Modification Guidelines
+
+- Always read the entire file before making changes
+- Preserve existing code style and patterns
+- Do not remove or modify code without understanding its purpose
+- Test changes thoroughly before suggesting additional modifications
+
+### 3. Project Structure
+
+- This is a Next.js App Router project with TypeScript
+- Follow established patterns in the codebase
+- Respect the existing architecture and component organization
+- Structure files: exported component, subcomponents, helpers, static content, types
+- Use lowercase with dashes for directories (e.g., components/auth-wizard)
+- Favor named exports for components
+
+### 4. Performance Considerations
+
+- Be mindful of performance implications when suggesting changes
+- Avoid unnecessary re-renders in React components
+- Consider bundle size when adding new dependencies
+- Minimize 'use client', 'useEffect', and 'setState'; favor React Server Components (RSC)
+- Wrap client components in Suspense with fallback
+- Use dynamic loading for non-critical components
+- Optimize Web Vitals (LCP, CLS, FID)
+
+### 5. Error Handling
+
+- Always include proper error handling in async operations
+- Provide meaningful error messages for debugging
+
+### 6. Documentation
+
+- Add comments for complex logic
+- Update documentation when changing functionality
+- Add JSDoc comments for public APIs and hooks
+- Include usage examples in component documentation
+- Document key architectural decisions
+
+### 7. Testing
+
+- Suggest tests for new functionality
+- Do not break existing tests
+- Write unit tests for hooks and utilities
+- Write integration tests for key user flows
+- Use React Testing Library for component tests
+
+### 8. UI and CSS Modifications
+
+- **IMPORTANT**: Do NOT modify UI or CSS when implementing functional changes
+- Keep UI/CSS changes separate from functional changes
+- Only change UI elements when explicitly requested
+- Use Tailwind CSS and Shadcn UI for components and styling
+- Implement responsive design with Tailwind CSS; use a mobile-first approach
+- Preserve existing styling patterns and design system
+- Do not refactor or "improve" UI components without specific instructions
+- When adding new functionality, match the existing UI style exactly
+- Optimize images: use WebP format, include size data, implement lazy loading
+
+### 9. TypeScript and Coding Style
+
+- Use TypeScript for all code; prefer interfaces over types
+- Avoid enums; use maps instead
+- Use functional components with TypeScript interfaces
+- Write concise, technical TypeScript code
+- Use functional and declarative programming patterns; avoid classes
+- Prefer iteration and modularization over code duplication
+- Use descriptive variable names with auxiliary verbs (e.g., isLoading, hasError)
+- Use the "function" keyword for pure functions
+- Avoid unnecessary curly braces in conditionals; use concise syntax for simple statements
+- Use declarative JSX
+
+### 10. State Management
+
+- Prefer React Server Components for data fetching
+- Use React Context sparingly and only for UI state
+- Use 'nuqs' for URL search parameter state management
+- Document global state patterns
+- Limit 'use client' to only when necessary for Web API access in small components
+- Avoid 'use client' for data fetching or state management
+
+### 11. Dependency Management
+
+- Consult before adding new dependencies
+- Consider bundle size impact when adding packages
+- Prefer well-maintained libraries with TypeScript support
+- Document why a dependency is needed when adding it
+- Use specific version numbers in package.json
+
+### 12. Accessibility
+
+- Maintain WCAG compliance in all UI components
+- Use semantic HTML elements
+- Ensure proper keyboard navigation
+- Include appropriate ARIA attributes when needed
+- Maintain sufficient color contrast
+
+### 13. Security Practices
+
+- Never expose API keys or secrets in client-side code
+- Validate all user inputs
+- Use proper authentication and authorization checks
+- Sanitize data before rendering to prevent XSS
+- Follow security best practices for Next.js applications
+
+### 14. Environment and Configuration
+
+- Use environment variables appropriately
+- Keep sensitive configuration in server-side only
+- Document required environment variables
+- Provide sensible defaults where appropriate
+- Follow the project's environment variable naming conventions
+
+### 15. Git Workflow and Checkpointing
+
+- **IMPORTANT**: Remind the user to commit changes after successfully implementing and testing a feature
+- Check git status after completing a task to ensure all changes are tracked
+- Suggest descriptive commit messages that explain what was changed and why
+- Recommend creating checkpoints before making significant changes
+- Encourage small, focused commits rather than large, sweeping changes
+
+## When in doubt, ask for clarification rather than making assumptions.
