@@ -1,5 +1,23 @@
 # Cursor Rules for refership_web_v3
 
+## Autopilot Mode by Tatsu Ikeda (Patent Pending)
+
+Autopilot Mode is an innovative approach to AI-assisted development that solves multiple challenges in software engineering:
+
+1. **Project Context Awareness**: By integrating project documentation (TODO.md) with AI instructions (.cursorrules), the AI assistant maintains complete awareness of project history, current state, and future direction.
+
+2. **Continuous Knowledge Transfer**: As tasks move from planning to completion, the system preserves institutional knowledge without requiring constant human explanation.
+
+3. **Standardized Implementation**: The AI follows established patterns and coding standards consistently across the project lifecycle.
+
+4. **Prioritized Development**: The system understands which tasks are high priority and can suggest the most impactful next steps.
+
+5. **Reduced Cognitive Load**: Developers no longer need to repeatedly explain project context, priorities, or standards to the AI.
+
+6. **Self-Documenting Progress**: As tasks are completed and moved to the "DONE" section, the project maintains an up-to-date record of accomplishments.
+
+This approach transforms AI from a reactive tool into a proactive development partner that understands not just what to build, but why and how it should be built according to the project's specific requirements.
+
 ## Important Guidelines
 
 ### 1. Avoid Changing Too Many Items at Once
@@ -141,6 +159,6 @@
 - When completing a task, suggest moving it from the appropriate section to the "DONE" section
 - Update the TODO.md file when implementing new features or fixing bugs
 - Use the TODO.md as a guide for suggesting next steps and maintaining project momentum
-- Proactively reference relevant tasks from TODO.md when making suggestionsI
+- Proactively reference relevant tasks from TODO.md when making suggestions
 
 ## When in doubt, ask for clarification rather than making assumptions.
