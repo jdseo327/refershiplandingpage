@@ -2,6 +2,13 @@
 
 import Link from 'next/link';
 
+/**
+ * The SVG icon component for the application logo.
+ *
+ * @param {Object} props - Component props
+ * @param {string} [props.className] - Optional CSS class name to apply to the SVG
+ * @returns {JSX.Element} SVG logo icon
+ */
 export const LogoIcon = ({ className = '' }: { className?: string }) => (
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="-0.5 -0.5 330 182" className={className}>
     <g>
@@ -18,6 +25,14 @@ export const LogoIcon = ({ className = '' }: { className?: string }) => (
   </svg>
 );
 
+/**
+ * A clickable logo component that links to the home page.
+ * Includes hover animation effect with scale on hover.
+ *
+ * Import with: import { Logo } from '@/components/Logo';
+ *
+ * @returns {JSX.Element} Logo component with link to home
+ */
 export function Logo() {
   return (
     <Link href="/" className="group">
