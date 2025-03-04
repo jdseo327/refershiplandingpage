@@ -28,6 +28,12 @@ import Head from 'next/head';
 // This would be imported when you integrate EmailJS
 // import emailjs from '@emailjs/browser';
 
+/**
+ * Home page component for the Refership application.
+ * Contains hero section, features, benefits, and waitlist signup forms.
+ *
+ * @returns {JSX.Element} The complete home page
+ */
 export default function Home() {
   // Add state to track theme
   const [isDark, setIsDark] = useState(false);
@@ -44,7 +50,12 @@ export default function Home() {
   const [waitlistSubmitting, setWaitlistSubmitting] = useState(false);
   const [waitlistError, setWaitlistError] = useState('');
 
-  // Validate email format
+  /**
+   * Validates if a string is in email format.
+   *
+   * @param {string} email - The email string to validate
+   * @returns {boolean} True if the email format is valid, false otherwise
+   */
   const isValidEmail = (email: string): boolean => {
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     return emailRegex.test(email);

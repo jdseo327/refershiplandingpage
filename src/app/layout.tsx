@@ -26,6 +26,14 @@ export const metadata: Metadata = {
   },
 };
 
+/**
+ * Root layout component that wraps all pages in the application.
+ * Provides the HTML structure, theme provider, and site header.
+ *
+ * @param {Object} props - Component props
+ * @param {React.ReactNode} props.children - The page content to be rendered inside the layout
+ * @returns {JSX.Element} The root layout structure
+ */
 export default function RootLayout({
   children,
 }: Readonly<{
