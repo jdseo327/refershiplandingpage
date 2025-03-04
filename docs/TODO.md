@@ -30,6 +30,21 @@
    - Add proper error handling and success messages
    - Set up email templates in EmailJS dashboard
    - Add tracking for form submissions
+   - **Detailed Implementation Plan:**
+     - **Email Flow:**
+       - Send immediate confirmation email upon form submission
+       - Send delayed thank you email after 24 hours with additional information
+       - Include generic login credentials for POC and UX Prototype access
+     - **Data Storage (Poor Man's CRM):**
+       - Set up Airtable base to store waitlist signups
+       - Create fields for name, email, signup date, source (hero vs waitlist form)
+       - Use Zapier/Make to connect EmailJS with Airtable
+     - **Technical Implementation:**
+       - Install EmailJS package and configure in the project
+       - Create reusable email sending service/hook
+       - Implement loading and success states for forms
+       - Add error handling with user-friendly messages
+       - Set up delayed email sequence using Zapier/Make with 24-hour delay
 
 2. **About Page**
 
