@@ -181,6 +181,18 @@ export default function Home() {
               <span className="hero-title-line2 block mt-2">Your AI Chief BD Officer</span>
             </h1>
             <div className="hero-subtitle-container mx-auto max-w-3xl px-4 py-3 mb-8 sm:mb-10 text-center bg-gray-50/50 dark:bg-transparent backdrop-blur-sm rounded-lg">
+              {/* 
+                TODO: Improve line breaks on small screens. Current breaks are:
+                "What if finding strategic partners was" 
+                "as simple as"
+                "knowing who already wants to work"
+                "with you?"
+                
+                Desired breaks should be more natural, possibly:
+                "What if finding strategic partners"
+                "was as simple as knowing who already"
+                "wants to work with you?"
+              */}
               <p className="hero-subtitle text-lg sm:text-xl md:text-2xl lg:text-3xl leading-relaxed inline">
                 What if <span className="gradient-text font-bold">finding strategic partners</span>{' '}
                 was as simple as
