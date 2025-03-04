@@ -131,4 +131,16 @@
 - Recommend creating checkpoints before making significant changes
 - Encourage small, focused commits rather than large, sweeping changes
 
+### 16. Project Roadmap and Task Management
+
+- **CRITICAL**: Always refer to `docs/TODO.md` for project context and task prioritization
+- Use the "DONE" section to understand completed work and established patterns
+- Focus on "High Priority Tasks" section for next implementation targets
+- Address "UI Bug Fixes" when working on related components
+- Consider "Future Enhancements" for long-term planning and architecture decisions
+- When completing a task, suggest moving it from the appropriate section to the "DONE" section
+- Update the TODO.md file when implementing new features or fixing bugs
+- Use the TODO.md as a guide for suggesting next steps and maintaining project momentum
+- Proactively reference relevant tasks from TODO.md when making suggestionsI
+
 ## When in doubt, ask for clarification rather than making assumptions.
