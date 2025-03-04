@@ -32,7 +32,6 @@
    - Add tracking for form submissions
    - **Detailed Implementation Plan:**
      - **Email Flow:**
-       - Send immediate confirmation email upon form submission
        - Send delayed thank you email after 24 hours with additional information
        - Include generic login credentials for POC and UX Prototype access
      - **Data Storage (Poor Man's CRM):**
@@ -109,6 +108,33 @@
      "was as simple as knowing who already"
      "wants to work with you?"
      ```
+
+## Bug Tracker
+
+This section tracks bugs and issues that have been identified but temporarily set aside. Each entry includes:
+
+- File location
+- Description of the issue
+- Potential solutions or workarounds
+- Priority level (Critical, High, Medium, Low)
+
+When a bug is encountered that can't be immediately fixed:
+
+1. Add a `// TODO: [Bug Description]` comment in the code
+2. Add an entry to this Bug Tracker section
+3. Revisit and prioritize these issues regularly
+
+Example format:
+
+```
+1. **[Component Name] - [Brief Issue Description]** (Priority: [Level])
+   - File: src/path/to/file.tsx
+   - Issue: Detailed description of the problem
+   - Potential solutions: Ideas for fixing
+   - Added: YYYY-MM-DD
+```
+
+<!-- No bugs currently tracked -->
 
 ## Future Enhancements
 

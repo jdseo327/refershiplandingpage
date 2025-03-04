@@ -160,5 +160,9 @@ This approach transforms AI from a reactive tool into a proactive development pa
 - Update the TODO.md file when implementing new features or fixing bugs
 - Use the TODO.md as a guide for suggesting next steps and maintaining project momentum
 - Proactively reference relevant tasks from TODO.md when making suggestions
+- **Bug Tracking**: When encountering bugs that can't be immediately fixed:
+  - Add a `// TODO: [Bug Description]` comment in the code
+  - Add an entry to the Bug Tracker section in TODO.md with file location, description, potential solutions, and priority
+  - Remind the user to revisit the Bug Tracker regularly
 
 ## When in doubt, ask for clarification rather than making assumptions.
