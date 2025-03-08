@@ -1,8 +1,9 @@
 'use client';
 
 import * as React from 'react';
-import { Moon, Sun } from 'lucide-react';
 import { useTheme } from 'next-themes';
+import { Button } from '@/components/ui/button';
+import { Moon, Sun } from 'lucide-react';
 
 /**
  * A button component that toggles between light and dark themes.
@@ -18,15 +19,15 @@ export function ThemeToggle() {
   const { theme, setTheme } = useTheme();
 
   return (
-    <button
+    <Button
+      variant="ghost"
+      size="icon"
       onClick={() => setTheme(theme === 'light' ? 'dark' : 'light')}
-      className="p-2 focus:outline-none relative w-10 h-5 flex items-center justify-center"
+      className="h-8 w-8 sm:h-9 sm:w-9"
     >
+      <Sun className="h-4 w-4 rotate-0 scale-100 transition-all dark:-rotate-90 dark:scale-0" />
+      <Moon className="absolute h-4 w-4 rotate-90 scale-0 transition-all dark:rotate-0 dark:scale-100" />
       <span className="sr-only">Toggle theme</span>
-      <div className="relative w-5 h-5">
-        <Sun className="absolute inset-0 h-5 w-5 transition-opacity duration-300 text-zinc-700 dark:text-zinc-400 opacity-100 dark:opacity-0" />
-        <Moon className="absolute inset-0 h-5 w-5 transition-opacity duration-300 text-zinc-700 dark:text-zinc-400 opacity-0 dark:opacity-100" />
-      </div>
-    </button>
+    </Button>
   );
 }
