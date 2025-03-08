@@ -1,6 +1,6 @@
 'use client';
 
-import * as React from 'react';
+import { useState, useEffect } from 'react';
 import Link from 'next/link';
 import { ThemeToggle } from '@/components/theme-toggle';
 import HeaderBackground from '@/components/HeaderBackground';
@@ -8,11 +8,11 @@ import { LogoIcon } from './Logo';
 import { Menu, X } from 'lucide-react';
 
 export function SiteHeader() {
-  const [isMenuOpen, setIsMenuOpen] = React.useState(false);
-  const [isMobile, setIsMobile] = React.useState(false);
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [isMobile, setIsMobile] = useState(false);
 
   // Check if we're on a mobile device
-  React.useEffect(() => {
+  useEffect(() => {
     const checkIfMobile = () => {
       setIsMobile(window.innerWidth < 768);
     };
@@ -28,7 +28,7 @@ export function SiteHeader() {
   }, []);
 
   // Close menu when switching from mobile to desktop
-  React.useEffect(() => {
+  useEffect(() => {
     if (!isMobile) {
       setIsMenuOpen(false);
     }
