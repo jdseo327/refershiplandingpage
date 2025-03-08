@@ -51,16 +51,20 @@ export function SiteHeader() {
         <nav className="hidden md:flex flex-1 items-center justify-between ml-8 sm:ml-12">
           <div className="flex items-center space-x-6 sm:space-x-8">
             <Link
-              href="/proof-of-concept"
+              href="http://demo.refership.com:3000/"
               className="text-sm font-medium text-zinc-600 dark:text-zinc-400 transition-colors hover:text-zinc-900 dark:hover:text-white"
+              target="_blank"
+              rel="noopener noreferrer"
             >
-              Proof of Concept
+              UX Prototype (demo/lol)
             </Link>
             <Link
-              href="/ux-prototype"
+              href="http://poc.refership.com:3100/"
               className="text-sm font-medium text-zinc-600 dark:text-zinc-400 transition-colors hover:text-zinc-900 dark:hover:text-white"
+              target="_blank"
+              rel="noopener noreferrer"
             >
-              UX Prototype
+              Proof of Concept (demo/lol)
             </Link>
             <Link
               href="/blog"
@@ -102,18 +106,22 @@ export function SiteHeader() {
           <nav className="container py-3 sm:py-4 px-4 sm:px-6">
             <div className="flex flex-col space-y-3 sm:space-y-4">
               <Link
-                href="/proof-of-concept"
+                href="http://demo.refership.com:3000/"
                 className="text-sm font-medium text-zinc-600 dark:text-zinc-400 transition-colors hover:text-zinc-900 dark:hover:text-white px-2 py-1"
                 onClick={() => setIsMenuOpen(false)}
+                target="_blank"
+                rel="noopener noreferrer"
               >
-                Proof of Concept
+                UX Prototype (demo/lol)
               </Link>
               <Link
-                href="/ux-prototype"
+                href="http://poc.refership.com:3100/"
                 className="text-sm font-medium text-zinc-600 dark:text-zinc-400 transition-colors hover:text-zinc-900 dark:hover:text-white px-2 py-1"
                 onClick={() => setIsMenuOpen(false)}
+                target="_blank"
+                rel="noopener noreferrer"
               >
-                UX Prototype
+                Proof of Concept (demo/lol)
               </Link>
               <Link
                 href="/blog"
